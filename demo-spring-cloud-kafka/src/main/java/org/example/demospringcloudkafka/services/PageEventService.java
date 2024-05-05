@@ -12,5 +12,11 @@ public class PageEventService{
 
         };
     }
+    @Bean
+    public Supplier<PageEvent> pageEventSupplier(){
+        return ()->PageEvent(Math.random()>0.5? "U1":"U2", Math.random()>0.5"U1":"U2",new Date(),new Random().nextInt(9000));
+
+
+    }
 
 }
